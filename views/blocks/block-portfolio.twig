@@ -1,0 +1,66 @@
+{% if portfolio %}
+    <section class="site-wrapper !pt-20 !pb-10 flex flex-col justify-center" data-module-text>
+        <div class="flex flex-col gap-10" data-speed="clamp(0.9)">
+            <div class="flex gap-9">
+                {% if fields.order_by_categories %}
+                    <div>
+                        <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
+                            <option>Catégories</option>
+                            <option value="concert">concert</option>
+                            <option value="mariage">Mariage</option>
+                            <option value="reception">Réception</option>
+                            <option value="television">Télévision</option>
+                            {# {% for item in fields.links %}
+                                <option value="{{ item.value }}">{{ item.title }}</option>
+                            {% endfor %} #}
+                        </select>
+                    </div>
+                {% endif %}
+                {% if fields.order_by_formats %}
+                    <div>
+                        <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
+                            <option>Formats</option>
+                            <option value="1-1">1/1</option>
+                            <option value="4-4">4/4</option>
+                            <option value="paysage">Paysage</option>
+                            <option value="portrait">Portrait</option>
+                            {# {% for item in fields.links %}
+                                <option value="{{ item.value }}">{{ item.title }}</option>
+                            {% endfor %} #}
+                        </select>
+                    </div>
+                {% endif %}
+                {% if fields.order_by_date %}
+                    <div class="ml-auto">
+                        <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
+                            <option>Trier par</option>
+                            {# {% for item in fields.links %}
+                                <option value="{{ item.value }}">{{ item.title }}</option>
+                            {% endfor %} #}
+                        </select>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="flex flex-col gap-10 items-center">
+                <ul class="w-full grid grid-cols-12 gap-5">
+                    {% for item in portfolio %}
+                        <li class="relative col-span-6 aspect-square z-0">
+                            <img class="object-cover w-full h-full" src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}">
+                            <div class="absolute top-0 left-0 w-full h-full flex opacity-0 hover:opacity-100">
+                                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+                                <div class="relative w-full h-full p-3 px-4 flex items-end justify-between">
+                                    <p class="font-sans font-medium text-white uppercase">{{ item.title }}</p>
+                                    <p class="font-mono font-normal leading-[1.45em] text-white uppercase text-right">{{ item.terms({taxonomy:'category'})|join(', ') }}</p>
+                                    <a class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-center" href="{{ item.link }}" target="_self">OEIL</a>
+                                    {# <p class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</p> #}
+                                    <button class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</button>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <button class="w-fit p-4 px-24 bg-grey-light">Charger plus</button>
+            </div>
+        </div>
+    </section>
+{% endif %}

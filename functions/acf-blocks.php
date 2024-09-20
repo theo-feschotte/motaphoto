@@ -26,4 +26,5 @@ if (function_exists('acf_register_block_type')) {
 
     // Register acf blocks
     require_once(get_template_directory().'/functions/blocks/block-hero.php');
+    require_once(get_template_directory().'/functions/blocks/block-portfolio.php');
 }
