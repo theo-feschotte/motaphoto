@@ -1,13 +1,12 @@
-<footer>
-	<div class="site-wrapper py-6 sm:py-12">
-		<nav class="site-grid site-grid--gap-y pb-16 sm:pb-36">
-			<ul class="col-span-2 flex flex-col gap-y-1">
-				{% for item in menu_footer.items %}
-					<li>
-						<a class="small" href="{{ item.link }}" target="{{ item.target ?: '_self' }}">{{ item.title }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</nav>
-	</div>
+<footer class="site-wrapper !py-2 border-top border-black">
+	<nav class="flex gap-20 justify-center">
+		<ul class="col-span-full flex gap-20">
+			{% for item in menu_footer.items %}
+				<li>
+					<a class="font-mono text-base font-normal uppercase {{ item.current ? 'active' }}" href="{{ item.link }}" target="{{ item.target ?: '_self' }}">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+		<p class="font-mono text-base font-normal uppercase">Tous droits réservés</p>
+	</nav>
 </footer>
