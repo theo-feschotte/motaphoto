@@ -1,13 +1,13 @@
 <header class="fixed top-0 left-0 w-full bg-white z-[999] pointer-events-none select-none">
-	<div class="site-wrapper flex justify-between items-center gap-4 py-6 sm:py-8">
+	<div class="site-wrapper flex justify-between items-center gap-4">
 		<div class="flex-initial">
 			<a class="pointer-events-auto" href="{{ site.url }}" target="_self" aria-label="Accueil">
 				<img class="w-[216px] h-auto" src="http://motaphoto.local/wp-content/uploads/2024/09/logo-nathalie-mota.png" alt="Logo de Nathalie Mota">
 			</a>
 		</div>
-		<nav class="menu flex-initial flex site-gap group pointer-events-auto max-sm:hidden">
+		<nav class="menu flex-initial flex gap-11 pointer-events-auto max-sm:hidden">
 			{% for item in menu_header.items %}
-				<a class="font-normal underline-offset-[.5rem] {{ item.current ? 'active' }} group-hover:opacity-30 hover:!opacity-100 transition-opacity duration-1000 ease-expo-out" href="{{ item.link }}" target="{{ item.target ?: '_self' }}">{{ item.title }}</a>
+				<a class="font-mono text-base font-normal uppercase {{ item.current ? 'active' }} ease-expo-out" href="{{ item.link }}" target="{{ item.target ?: '_self' }}">{{ item.title }}</a>
 			{% endfor %}
 		</nav>
 		<button class="big flex-initial flex items-center pointer-events-auto sm:hidden" data-menu="button">
