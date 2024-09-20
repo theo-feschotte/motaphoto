@@ -84,7 +84,7 @@
   }
 
   .btn {
-    @apply inline-block font-sans text-sm font-light rounded-full bg-primary text-white cursor-pointer;
+    @apply inline-block p-4 px-24 bg-grey-light hover:bg-black hover:text-white cursor-pointer;
   }
 
   p, .p, a {
