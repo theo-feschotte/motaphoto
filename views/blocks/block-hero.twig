@@ -5,7 +5,7 @@
 				<img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}">
 			</div>
 		{% endif %}
-		<div class="title">
+		<div {{ fn('is_front_page') ? 'class="title"' }}>
 			{% if fields.title %}
 				{{ fields.title }}
 			{% else %}
