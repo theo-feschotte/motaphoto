@@ -1,11 +1,11 @@
-<section class="relative w-full h-screen site-wrapper flex flex-col justify-center overflow-hidden z-0" data-module-text>
+<section class="relative w-full h-screen site-wrapper !px-52 flex flex-col justify-center overflow-hidden z-0" data-module-text>
 	<div data-speed="clamp(0.9)">
 		{% if post.thumbnail %}
 			<div class="absolute top-0 left-0 -z-10">
 				<img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}">
 			</div>
 		{% endif %}
-		<div>
+		<div class="title">
 			{% if fields.title %}
 				{{ fields.title }}
 			{% else %}
