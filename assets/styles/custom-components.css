@@ -54,11 +54,11 @@
         @apply mb-2 !important;
       }
       &#tarteaucitronPersonalize2 {
-        @apply bg-grey text-black !important;
+        @apply bg-grey-default text-black !important;
       }
       &#tarteaucitronAllDenied2,
       &#tarteaucitronCloseAlert {
-        @apply bg-black border border-grey text-white !important;
+        @apply bg-black border border-grey-default text-white !important;
       }
     }
   }
@@ -69,7 +69,7 @@
       overflow: auto !important;
       box-shadow: none !important;
       ul#tarteaucitronServices_analytics .tarteaucitronLine {
-        @apply bg-grey !important;
+        @apply bg-grey-default !important;
       }
     }
   }
