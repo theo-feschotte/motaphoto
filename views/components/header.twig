@@ -7,7 +7,7 @@
 		</div>
 		<nav class="menu flex-initial flex gap-11 pointer-events-auto max-sm:hidden">
 			{% for item in menu_header.items %}
-				<a class="font-mono text-base font-normal uppercase {{ item.current ? 'active' }} ease-expo-out" href="{{ item.link }}" target="{{ item.target ?: '_self' }}">{{ item.title }}</a>
+				<a class="font-mono text-base font-normal uppercase {{ item.current ? 'active' }} opacity-50 hover:opacity-100 ease-expo-out" href="{{ item.link }}" target="{{ item.target ?: '_self' }}">{{ item.title }}</a>
 			{% endfor %}
 		</nav>
 		<button class="big flex-initial flex items-center pointer-events-auto sm:hidden" data-menu="button">
