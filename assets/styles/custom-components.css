@@ -1,5 +1,12 @@
 @layer components {
 
+  .title {
+    h1 {
+      color: transparent;
+      -webkit-text-stroke: 3px #FFFFFF;
+    }
+  }
+
   .gform {
     /* .gform_wrapper {} */
     /* .gform_heading {} */
