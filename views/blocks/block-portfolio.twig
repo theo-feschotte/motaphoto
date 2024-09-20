@@ -1,5 +1,5 @@
 {% if portfolio %}
-    <section class="site-wrapper !pt-20 !pb-10 flex flex-col justify-center" data-module-text>
+    <section class="site-wrapper !pt-20 !pb-10 flex flex-col justify-center overflow-hidden" data-module-text>
         <div class="flex flex-col gap-10" data-speed="clamp(0.9)">
             <div class="flex gap-9">
                 {% if fields.order_by_categories %}
@@ -59,7 +59,7 @@
                         </li>
                     {% endfor %}
                 </ul>
-                <button class="w-fit p-4 px-24 bg-grey-light">Charger plus</button>
+                <button class="btn">Charger plus</button>
             </div>
         </div>
     </section>
