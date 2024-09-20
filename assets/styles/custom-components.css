@@ -1,0 +1,79 @@
+@layer components {
+
+  .gform {
+    /* .gform_wrapper {} */
+    /* .gform_heading {} */
+    /* .gform_title {} */
+    /* .gform_description {} */
+    /* .gform_required_legend {} */
+    /* .gform_validation_errors {
+      @apply m-0 mb-3 p-3 !important;
+    } */
+    /* .gform_submission_error {
+      @apply flex gap-3 items-center !important;
+      .gform-icon {
+        @apply static !important;
+      }
+    } */
+    /* form {} */
+    /* .gform_body {} */
+    /* .validation_message {} */
+    /* .gform_fields {
+      .gfield {
+        .gfield_label {
+          .gfield_required {
+            .gfield_required_asterisk {}
+          }
+        }
+        .ginput_container {
+          input,
+          textarea {}
+        }
+      }
+      .gfield--type-text {}
+      .gfield--type-email {}
+      .gfield--type-phone {}
+      .gfield--type-textarea {}
+      .gfield--type-consent {}
+    } */
+    /* .gform_footer {} */
+    /* .gform_button[type="submit"] {} */
+  }
+
+  html body #tarteaucitronRoot div#tarteaucitronAlertBig {
+    @apply font-sans left-6 sm:left-4 bottom-0 sm:bottom-0 p-6 bg-black text-white font-normal rounded-t-xl max-w-72 !important;
+    &::before {
+      display: none;
+    }
+    #tarteaucitronDisclaimerAlert {
+      @apply m-0 p-0 font-normal text-base leading-5 mb-4 bg-black text-white text-left !important;
+    }
+    button {
+      @apply block m-0 p-3 w-full font-normal rounded-md text-base leading-none !important;
+      &:not(:last-child) {
+        @apply mb-2 !important;
+      }
+      &#tarteaucitronPersonalize2 {
+        @apply bg-grey text-black !important;
+      }
+      &#tarteaucitronAllDenied2,
+      &#tarteaucitronCloseAlert {
+        @apply bg-black border border-grey text-white !important;
+      }
+    }
+  }
+  html body #tarteaucitronRoot div#tarteaucitron {
+    /* @apply font-sans !important; */
+    #tarteaucitronServices {
+      /* height: auto !important; */
+      overflow: auto !important;
+      box-shadow: none !important;
+      ul#tarteaucitronServices_analytics .tarteaucitronLine {
+        @apply bg-grey !important;
+      }
+    }
+  }
+  #tarteaucitronRoot button#tarteaucitronBack {
+    @apply bg-black !important;
+  }
+}

@@ -1,0 +1,23 @@
+@layer utilities {
+
+  .site-wrapper {
+    @apply w-full px-6 sm:px-12;
+  }
+
+  .site-wrapper-large {
+    @apply w-full px-6 sm:px-4;
+  }
+
+  .site-grid {
+    @apply grid grid-cols-4 sm:grid-cols-12 gap-x-4 sm:gap-x-4;
+  }
+
+  .site-grid--gap-y {
+    @apply gap-y-4 sm:gap-y-4;
+  }
+
+  .site-gap {
+    @apply gap-4 sm:gap-4;
+  }
+  
+}

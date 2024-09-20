@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" {{ site.language_attributes }}>
+	<head>
+		<meta charset="{{ site.charset }}"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		{{ function('wp_head') }}
+
+		{# Tarte au citron #}
+
+		<link rel="author" href="{{ site.theme.link }}/humans.txt"/>
+		<link rel="pingback" href="{{ site.pingback_url }}"/>
+		<link rel="profile" href="http://gmpg.org/xfn/11"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ site.theme.link }}/favicons/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ site.theme.link }}/favicons/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ site.theme.link }}/favicons/favicon-16x16.png"/>
+		<link rel="manifest" href="{{ site.theme.link }}/site.webmanifest"/>
+		<link rel="mask-icon" href="{{ site.theme.link }}/favicons/safari-pinned-tab.svg" color="#73bc7a"/>
+		<link rel="shortcut icon" href="{{ site.theme.link }}/favicons/favicon.ico"/>
+		<meta name="msapplication-TileColor" content="#73bc7a"/>
+		<meta name="theme-color" content="#ffffff"/>
+	</head>
+
+	<body class="wp-site {{ body_class }}" data-module-scroll data-module-load-disabled data-load="wrapper" data-module-anim data-module-menu data-module-splitt>
+		<div id="smooth-wrapper" data-load="container">
+			<div id="smooth-content">
+				{% block header %}
+					{% include 'components/header.twig' %}
+					{% include 'components/menu.twig' %}
+				{% endblock %}
+
+				{% block content %}
+					<main>
+						{{ post.content }}
+					</main>
+				{% endblock %}
+
+				{% block footer %}
+					{% include 'components/footer.twig' %}
+				{% endblock %}
+			</div>
+		</div>
+		{{ function('wp_footer') }}
+	</body>
+</html>

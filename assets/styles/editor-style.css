@@ -1,0 +1,48 @@
+@import "tailwindcss/base";
+@import "./custom-base.css";
+
+@import "tailwindcss/components";
+@import "./custom-components.css";
+
+@import "tailwindcss/utilities";
+@import "./custom-utilities.css";
+
+:root {
+  /* //   --size: 300; */
+  --size: 390;
+  --font-size: clamp(1px, 16px, 16 * 100vw / var(--size));
+  @media (min-width: 640px) {
+    --size: 1440;
+    --font-size: clamp(1px, 24px, 16 * 70vw / var(--size));
+  }
+}
+
+html :where(.editor-styles-wrapper) {
+  padding: 0;
+}
+.edit-post-visual-editor {
+  .edit-post-visual-editor__post-title-wrapper {
+    @apply w-full;
+    @apply px-8;
+    @apply sm:px-12;
+  }
+}
+.acf-block-preview {
+  overflow: hidden;
+  .c-button,
+  a,
+  select,
+  input,
+  textarea {
+    pointer-events: none;
+  }
+}
+
+/* // admin overrides */
+:root {
+  .wp-block {
+    max-width: 100%;
+    width: 100%;
+    /* // margin-bottom: var(--space-m); */
+  }
+}
