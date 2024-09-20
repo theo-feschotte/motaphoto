@@ -101,6 +101,12 @@
     &-big {
       @apply font-sans text-xl font-light;
     }
+    &-title {
+      h1 {
+        color: transparent;
+        -webkit-text-stroke: 3px #FFFFFF;
+      }
+    }
     &-suptitle {
       @apply font-mono text-sm font-normal leading-[1.45em] tracking-widest uppercase;
     }
