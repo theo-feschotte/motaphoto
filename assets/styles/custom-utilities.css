@@ -1,11 +1,11 @@
 @layer utilities {
 
   .site-wrapper {
-    @apply w-full px-6 sm:px-12;
+    @apply w-full p-9 px-36;
   }
 
   .site-wrapper-large {
-    @apply w-full px-6 sm:px-4;
+    @apply w-full p-9 px-20;
   }
 
   .site-grid {
