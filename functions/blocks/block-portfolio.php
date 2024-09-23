@@ -25,6 +25,14 @@ function block_portfolio( $block, $content = '', $is_preview = false ) {
     $context['is_preview'] = $is_preview;
     $context['post'] = Timber::get_post();
 
+    $context['categories'] = Timber::get_terms(array(
+        'taxonomy' => 'categorie',
+    ));
+
+    $context['formats'] = Timber::get_terms(array(
+        'taxonomy' => 'format',
+    ));
+
     $context['portfolio'] = Timber::get_posts(array(
         'post_type' => 'portfolio',
         'posts_per_page' => 8,
