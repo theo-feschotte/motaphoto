@@ -6,13 +6,9 @@
                     <div>
                         <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
                             <option>Catégories</option>
-                            <option value="concert">concert</option>
-                            <option value="mariage">Mariage</option>
-                            <option value="reception">Réception</option>
-                            <option value="television">Télévision</option>
-                            {# {% for item in fields.links %}
-                                <option value="{{ item.value }}">{{ item.title }}</option>
-                            {% endfor %} #}
+                            {% for categorie in categories %}
+                                <option value="{{ categorie.slug }}">{{ categorie.title }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 {% endif %}
@@ -20,13 +16,9 @@
                     <div>
                         <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
                             <option>Formats</option>
-                            <option value="1-1">1/1</option>
-                            <option value="4-4">4/4</option>
-                            <option value="paysage">Paysage</option>
-                            <option value="portrait">Portrait</option>
-                            {# {% for item in fields.links %}
-                                <option value="{{ item.value }}">{{ item.title }}</option>
-                            {% endfor %} #}
+                            {% for format in formats %}
+                                <option value="{{ format.slug }}">{{ format.title }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 {% endif %}
@@ -34,9 +26,8 @@
                     <div class="ml-auto">
                         <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
                             <option>Trier par</option>
-                            {# {% for item in fields.links %}
-                                <option value="{{ item.value }}">{{ item.title }}</option>
-                            {% endfor %} #}
+                            <option value="desc">Desc</option>
+                            <option value="asc">Asc</option>
                         </select>
                     </div>
                 {% endif %}
@@ -50,7 +41,7 @@
                                 <div class="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
                                 <div class="relative w-full h-full p-3 px-4 flex items-end justify-between">
                                     <p class="font-sans font-medium text-white uppercase">{{ item.title }}</p>
-                                    <p class="font-mono font-normal leading-[1.45em] text-white uppercase text-right">{{ item.terms({taxonomy:'category'})|join(', ') }}</p>
+                                    <p class="font-mono font-normal leading-[1.45em] text-white uppercase text-right">{{ item.terms({taxonomy:'categorie'})|join(', ') }}</p>
                                     <a class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-center" href="{{ item.link }}" target="_self">OEIL</a>
                                     {# <p class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</p> #}
                                     <button class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</button>
