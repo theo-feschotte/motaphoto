@@ -4,7 +4,7 @@
             <div class="flex gap-9">
                 {% if fields.order_by_categories %}
                     <div>
-                        <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
+                        <select class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
                             <option>Catégories</option>
                             {% for categorie in categories %}
                                 <option value="{{ categorie.slug }}">{{ categorie.title }}</option>
@@ -14,7 +14,7 @@
                 {% endif %}
                 {% if fields.order_by_formats %}
                     <div>
-                        <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
+                        <select class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
                             <option>Formats</option>
                             {% for format in formats %}
                                 <option value="{{ format.slug }}">{{ format.title }}</option>
@@ -24,10 +24,10 @@
                 {% endif %}
                 {% if fields.order_by_date %}
                     <div class="ml-auto">
-                        <select class="p-5 pr-40 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
+                        <select class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
                             <option>Trier par</option>
-                            <option value="desc">Desc</option>
-                            <option value="asc">Asc</option>
+                            <option value="desc">Récent au plus ancien</option>
+                            <option value="asc">Ancien au plus récent</option>
                         </select>
                     </div>
                 {% endif %}
@@ -43,7 +43,6 @@
                                     <p class="font-sans font-medium text-white uppercase">{{ item.title }}</p>
                                     <p class="font-mono font-normal leading-[1.45em] text-white uppercase text-right">{{ item.terms({taxonomy:'categorie'})|join(', ') }}</p>
                                     <a class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-center" href="{{ item.link }}" target="_self">OEIL</a>
-                                    {# <p class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</p> #}
                                     <button class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</button>
                                 </div>
                             </div>
