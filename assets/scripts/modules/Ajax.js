@@ -82,7 +82,6 @@ export default class extends BaseModule {
 
     data.append("action", this.getData("action"));
     data.append("filter", JSON.stringify(this.filter));
-    // data.append("paged", this.filter["page"]);
 
     request.open("POST", ajaxurl, true);
     request.onreadystatechange = () => {
