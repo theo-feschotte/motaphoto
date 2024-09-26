@@ -9,9 +9,6 @@ export default class extends BaseModule {
     this.events = {
       change: {
         input: "submitFilter",
-        // inputCategories: "submitFilter",
-        // inputFormats: "submitFilter",
-        // inputOrderby: "submitFilter",
       },
       click: {
         // prevPage: "prevPage",
@@ -92,7 +89,7 @@ export default class extends BaseModule {
       if (request.readyState == 4 && request.status == 200) {
         const responseData = JSON.parse(request.responseText);
         console.log(responseData);
-        
+
         // this.$("results")[0].outerHTML = responseData.results;
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = responseData.results;
