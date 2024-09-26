@@ -52,9 +52,9 @@ if (defined( 'VITE_DEV' ) && VITE_DEV === true) { // Dev version
                 wp_enqueue_script( 'site', DIST_URI . '/' . $manifest[APP_JS]['file'], array(), '', true );
                 
                 // ajax
-                // wp_localize_script('site', 'ajax_params', array(
-                //     'ajaxurl' => admin_url( 'admin-ajax.php' ),
-                // ));
+                wp_localize_script('site', 'ajax_params', array(
+                    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+                ));
             });
         };
 
