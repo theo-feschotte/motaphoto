@@ -7,7 +7,7 @@
                 <div class="col-span-6 pr-36 pb-9 flex flex-col gap-5 justify-end border-b">
                     <h1 class="h2">{{ post.meta('second_title') ? post.meta('second_title')|striptags('<br>') : post.title  }}</h1>
                     <p class="font-mono font-normal leading-[1.45em] tracking-widest uppercase">Référence : {{ post.meta('ref') }}</p>
-                    <p class="font-mono font-normal leading-[1.45em] tracking-widest uppercase">Catégorie : {{ post.terms({taxonomy:'category'})|join(', ') }}</p>
+                    <p class="font-mono font-normal leading-[1.45em] tracking-widest uppercase">Catégorie : {{ post.terms({taxonomy:'categorie'})|join(', ') }}</p>
                     <p class="font-mono font-normal leading-[1.45em] tracking-widest uppercase">Format : {{ post.terms({taxonomy:'format'})|join(', ') }}</p>
                     <p class="font-mono font-normal leading-[1.45em] tracking-widest uppercase">Type : {{ post.meta('type') }}</p>
                     <p class="font-mono font-normal leading-[1.45em] tracking-widest uppercase">Année : {{ post.meta('year') }}</p>
