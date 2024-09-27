@@ -24,22 +24,14 @@
                 </div>
             {% endif %}
             {% if fields.order_by_date %}
-                <div class="ml-auto">
-                    <select class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]">
-                        <option>Trier par</option>
+                <div class="ml-auto flex gap-2 items-center">
+                    <label class="sr-only" for="orderby-select">Trier par</label>
+                    <select id="orderby-select" name="orderby-select" class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]" data-ajax="input">
+                        <option value="">Trier par</option>
                         <option value="desc">Récent au plus ancien</option>
                         <option value="asc">Ancien au plus récent</option>
                     </select>
                 </div>
-                {# <div class="ml-auto flex gap-2 items-center">
-                    <label class="sr-only" for="orderby-select">Trier par</label>
-                    <select id="orderby-select" name="orderby-select" class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]" data-ajax="input">
-                        <option>Trier par</option>
-                        {% for order in orderby %}
-                            <option value="{{ order.slug }}">{{ order.title }}</option>
-                        {% endfor %}
-                    </select>
-                </div> #}
             {% endif %}
         </div>
         <div class="flex flex-col gap-10 items-center">
