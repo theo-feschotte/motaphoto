@@ -7,8 +7,16 @@
                 <div class="relative w-full h-full p-3 px-4 flex items-end justify-between">
                     <p class="font-sans font-medium text-white uppercase">{{ post.title }}, {{ post.terms({taxonomy:'format'})|join(', ') }}</p>
                     <p class="font-mono font-normal leading-[1.45em] text-white uppercase text-right">{{ post.terms({taxonomy:'categorie'})|join(', ') }}</p>
-                    <a class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-center" href="{{ post.link }}" target="_self">OEIL</a>
-                    <button class="absolute top-3 right-4 flex items-center justify-center text-white text-center">FULL</button>
+                    <a class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 aspect-square p-3 flex items-center justify-center text-white text-center rounded-full overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:-z-10 before:scale-105 before:w-full before:h-full before:bg-black before:opacity-100" href="{{ post.link }}" target="_self">
+                        {% include 'components/icon-eye.twig' with {
+                            class: 'fill-white',
+                        } %}
+                    </a>
+                    <button class="absolute top-3 right-4 z-0 aspect-square p-3 flex items-center justify-center text-white text-center rounded-full overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:-z-10 before:scale-105 before:w-full before:h-full before:bg-black before:opacity-100">
+                        {% include 'components/icon-fullscreen.twig' with {
+                            class: 'stroke-white',
+                        } %}
+                    </button>
                 </div>
             </div>
         </li>
