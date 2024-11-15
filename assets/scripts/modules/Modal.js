@@ -6,7 +6,7 @@ export default class extends BaseModule {
 
         this.events = {
             click: {
-              btnContact: "openModal",
+              btn: "openModal",
               close: "closeModal",
             },
         };
