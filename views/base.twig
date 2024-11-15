@@ -23,9 +23,13 @@
 		<meta name="theme-color" content="#ffffff"/>
 	</head>
 
-	<body class="wp-site {{ body_class }}" data-module-scroll data-module-load-disabled data-load="wrapper" data-module-anim data-module-menu data-module-splitt>
+	<body class="wp-site {{ body_class }}" data-module-modal data-module-scroll data-module-load-disabled data-load="wrapper" data-module-anim data-module-menu data-module-splitt>
 		<div id="smooth-wrapper" data-load="container">
 			<div id="smooth-content">
+				{% include 'components/modal.twig' with {
+					ref: post.meta('ref'),
+				} %}
+
 				{% block header %}
 					{% include 'components/header.twig' %}
 					{% include 'components/menu.twig' %}

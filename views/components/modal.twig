@@ -1,0 +1,31 @@
+<div class="hidden opacity-0 user-none pointer-events-none fixed top-0 left-0 z-[9999] w-full h-full flex justify-center items-center duration-200" data-modal="container">
+    <div class="absolute top-0 left-0 -z-20 w-full h-full bg-secondary opacity-95 hover:opacity-85 duration-200 cursor-pointer" data-modal="close"></div>
+    <div class="max-h-full pt-5 pb-9 flex flex-col gap-12 border border-4 border-black bg-white overflow-scroll">
+        <div class="site-wrapper !px-0">
+            <h2>Contact</h2>
+        </div>
+        <div class="site-wrapper !py-0">
+            <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-1">
+                    <label class="uppercase" for="firstname">Nom</label>
+                    <input class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]" type="text" id="firstname" name="firstname">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="uppercase" for="email">Email</label>
+                    <input class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]" type="email" id="email" name="email">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="uppercase" for="ref">Réf. photo</label>
+                    <input class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]" type="text" id="ref" name="ref" {{ ref ? 'value="' ~ ref ~ '"' }}>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="uppercase" for="message">Message</label>
+                    <textarea class="w-64 p-5 pr-8 py-3 border-grey-default rounded-lg text-secondary text-xs font-medium uppercase tracking-[0.03em]" rows="10" id="message" name="message"></textarea>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <button class="btn" type="submit">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
