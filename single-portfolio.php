@@ -24,4 +24,23 @@ $context['posts'] = Timber::get_posts([
     ],
 ]);
 
+$context['prev_post'] = Timber::get_post(get_adjacent_post(false, '', true));
+$context['next_post'] = Timber::get_post(get_adjacent_post(false, '', false));
+if (is_null($context['prev_post']) || $context['prev_post']->ID === $context['post']->ID) {
+    $context['prev_post'] = Timber::get_posts([
+        'post_type' => 'portfolio',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+    ])[0];
+};
+if (is_null($context['next_post']) || $context['next_post']->ID === $context['post']->ID) {
+    $context['next_post'] = Timber::get_posts([
+        'post_type' => 'portfolio',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'ASC',
+    ])[0];
+};
+
 Timber::render( 'layouts/single-portfolio.twig', $context );

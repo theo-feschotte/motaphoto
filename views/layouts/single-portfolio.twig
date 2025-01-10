@@ -24,8 +24,18 @@
                     <p>{{ options.portfolio_interested ?: 'Cette photo vous intéresse ?' }}</p>
                     <button class="btn" data-modal="btn">Contact</button>
                 </div>
-                <div class="w-[80px] h-[70px] ml-auto">
-                    <img class="object-cover w-full h-full" src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}">
+                <div class="ml-auto flex flex-col gap-5" data-module-customslider>
+                    <div class="w-[80px] h-[70px]">
+                        <img class="group-hover:opacity-10 object-cover w-full h-full" src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" data-customslider="image">
+                    </div>
+                    <div class="w-full h-full flex justify-between items-center" data-customslider="pagination">
+                        <a class="group" href="{{ prev_post.link }}" target="_self" data-src="{{ prev_post.thumbnail.src }}">
+                            <svg class="-scale-x-100 fill-black group-hover:-translate-x-1 duration-200" width="26" height="8" viewBox="0 0 26 8" xmlns="http://www.w3.org/2000/svg"><path d="M25.3536 3.64645C25.5488 3.84171 25.5488 4.15829 25.3536 4.35355L22.1716 7.53553C21.9763 7.7308 21.6597 7.7308 21.4645 7.53553C21.2692 7.34027 21.2692 7.02369 21.4645 6.82843L24.2929 4L21.4645 1.17157C21.2692 0.976311 21.2692 0.659728 21.4645 0.464466C21.6597 0.269204 21.9763 0.269204 22.1716 0.464466L25.3536 3.64645ZM25 4.5H0V3.5H25V4.5Z"/></svg>
+                        </a>
+                        <a class="group" href="{{ next_post.link }}" target="_self" data-src="{{ next_post.thumbnail.src }}">
+                            <svg class="fill-black group-hover:translate-x-1 duration-200" width="26" height="8" viewBox="0 0 26 8" xmlns="http://www.w3.org/2000/svg"><path d="M25.3536 3.64645C25.5488 3.84171 25.5488 4.15829 25.3536 4.35355L22.1716 7.53553C21.9763 7.7308 21.6597 7.7308 21.4645 7.53553C21.2692 7.34027 21.2692 7.02369 21.4645 6.82843L24.2929 4L21.4645 1.17157C21.2692 0.976311 21.2692 0.659728 21.4645 0.464466C21.6597 0.269204 21.9763 0.269204 22.1716 0.464466L25.3536 3.64645ZM25 4.5H0V3.5H25V4.5Z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
