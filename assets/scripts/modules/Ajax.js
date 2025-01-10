@@ -96,7 +96,7 @@ export default class extends BaseModule {
         };
         items.forEach(item => this.$("results")[0].appendChild(item));
         tempDiv.remove();
-
+        
         if (this.$("pagination")[0]) {
           this.$("pagination")[0].outerHTML = responseData.pagination;
         };
