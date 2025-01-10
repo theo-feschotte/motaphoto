@@ -87,18 +87,16 @@ export default class extends BaseModule {
     request.onreadystatechange = () => {
       if (request.readyState == 4 && request.status == 200) {
         const responseData = JSON.parse(request.responseText);
-        console.log(responseData);
-
-        // this.$("results")[0].outerHTML = responseData.results;
+        
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = responseData.results;
         const items = tempDiv.querySelectorAll('ul > li');
+        if (this.filter["page"] === 1) {
+          this.$("results")[0].innerHTML = '';
+        };
         items.forEach(item => this.$("results")[0].appendChild(item));
         tempDiv.remove();
 
-        if (this.$("loadmore")[0]) {
-          this.$("loadmore")[0].outerHTML = responseData.data;
-        };
         if (this.$("pagination")[0]) {
           this.$("pagination")[0].outerHTML = responseData.pagination;
         };
