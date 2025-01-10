@@ -98,14 +98,9 @@ function portfolio_ajax_handler() {
                 ];
             };
         };
-        // if (isset($filter['orderby-select']) && $filter['orderby-select'] != null) {
-        //     $args = [
-        //         'post_type' => 'portfolio',
-        //         'posts_per_page' => 8,
-        //         'orderby' => 'date',
-        //         'order' => $filter['orderby-select'],
-        //     ];
-        // };
+        if (isset($filter['orderby-select']) && $filter['orderby-select'] != null) {
+            $args['order'] = $filter['orderby-select'];
+        };
     };
     $context = Timber::context();
     $context['posts'] = Timber::get_posts($args);
