@@ -1,7 +1,7 @@
 @layer utilities {
 
   .site-wrapper {
-    @apply w-full p-7 px-36;
+    @apply w-full p-7 px-0 sm:px-36;
   }
 
   .site-wrapper-large {
