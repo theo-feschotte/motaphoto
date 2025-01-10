@@ -104,7 +104,10 @@
     &-title {
       h1 {
         color: transparent;
-        -webkit-text-stroke: 3px #FFFFFF;
+        -webkit-text-stroke: 1px #FFFFFF;
+        @media (min-width: 640px) {
+          -webkit-text-stroke: 3px #FFFFFF;
+        }
       }
     }
     &-suptitle {
