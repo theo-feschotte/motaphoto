@@ -58,7 +58,7 @@
   }
 
   h2, .h2 {
-    @apply font-mono text-3xl sm:text-5xl italic font-normal uppercase;
+    @apply font-mono text-3xl sm:text-5xl font-normal uppercase;
   }
 
   h3, .h3 {
