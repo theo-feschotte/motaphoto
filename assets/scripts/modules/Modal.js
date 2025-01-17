@@ -32,16 +32,12 @@ export default class extends BaseModule {
     openModal() {
         this.container.classList.remove("hidden");
         setTimeout(() => {
-            this.container.classList.remove("opacity-0");
-            this.container.classList.remove("user-none");
-            this.container.classList.remove("pointer-events-none");
+            this.container.classList.remove("opacity-0", "user-none", "pointer-events-none");
         }, 0);
     }
 
     closeModal() {
-        this.container.classList.add("opacity-0");
-        this.container.classList.add("user-none");
-        this.container.classList.add("pointer-events-none");
+        this.container.classList.add("opacity-0", "user-none", "pointer-events-none");
         setTimeout(() => {
             this.container.classList.add("hidden");
         }, this.delay);
