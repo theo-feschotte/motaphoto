@@ -33,7 +33,6 @@ export default class extends BaseModule {
 
     this.swiper = new Swiper(this.$("slider")[0], {
       modules: [Navigation],
-      loop: true,
       navigation: {
         prevEl: this.$("prev")[0],
         nextEl: this.$("next")[0],
