@@ -36,8 +36,13 @@
 				{% endblock %}
 
 				{% block content %}
-					<main>
+					<main {{ options.lightbox ? 'data-module-lightbox' }}>
 						{{ post.content }}
+						{% if options.lightbox %}
+							{% include 'components/lightbox.twig' with {
+								posts: lightbox,
+							} %}
+						{% endif %}
 					</main>
 				{% endblock %}
 
