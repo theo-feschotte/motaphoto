@@ -1,9 +1,9 @@
-<aside class="menu-mobile fixed inset-0 bg-black z-[998] overflow-hidden pointer-events-none opacity-0" data-menu="menu">
-	<nav class="site-wrapper h-full w-full flex flex-col justify-between items-center site-gap py-6 text-center absolute inset-0" data-menu="container">
-		<ul class="col-span-2 flex-1 flex flex-col justify-center gap-y-3 py-36">
-			{% for item in menu_footer.items %}
+<aside class="menu-mobile fixed inset-0 z-[998] bg-primary opacity-0 overflow-hidden pointer-events-none" data-menu="menu">
+	<nav class="absolute inset-0 site-wrapper w-full h-full py-6 flex flex-col items-center justify-between site-gap" data-menu="container">
+		<ul class="flex-1 col-span-2 py-36 flex flex-col justify-center gap-y-3">
+			{% for item in menu_header.items %}
 				<li class="overflow-hidden">
-					<a class="h1 block" href="{{ item.link }}" target="{{ item.target ?: '_self' }}" data-menu="link">{{ item.title }}</a>
+					<a class="block h1 text-center text-white" href="{{ item.link }}" target="{{ item.target ?: '_self' }}" data-menu="link">{{ item.title }}</a>
 				</li>
 			{% endfor %}
 		</ul>
